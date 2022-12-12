@@ -1,0 +1,7 @@
+theme="gruvbox"
+[editor]
+line-number="relative"
+
+[editor.file-picker]
+hidden = false
+git-ignore = false

@@ -1,0 +1,29 @@
+[[language]]
+name = "c-sharp"
+scope = "source.csharp"
+injection-regex = "c-?sharp"
+file-types = ["cs"]
+roots = ["sln", "csproj"]
+comment-token = "//"
+indent = { tab-width = 4, unit = "\t" }
+language-server = { command = "/home/jev/soft/omnisharp/OmniSharp", args = ["--languageserver" ] }
+
+[[language]]
+name = "typescript"
+scope = "source.ts"
+injection-regex = "(ts|typescript)"
+file-types = ["ts"]
+shebangs = []
+roots = []
+# TODO: highlights-params
+language-server = { command = "typescript-language-server", args = ["--stdio"], language-id = "typescript"}
+indent = { tab-width = 4, unit = "\t" }
+
+
+[[language]]
+name = "rust"
+auto-format = false
+
+[[language]]
+name = "html"
+indent = { tab-width = 4, unit = "\t" }

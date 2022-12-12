@@ -1,0 +1,30 @@
+layout {
+    cwd "/home/jev/code/work"
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane cwd="/home/jev/code/work" {
+            command "nu"
+        }
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab_template name="helix-tab" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane {
+            command "nu"
+        }
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    pane_template name="with_ssh" {
+        command "ssh ~/.ssh/connect_rsa"
+    }
+    helix-tab name="webapp" cwd="foun-webapp"
+    helix-tab name="api" cwd="api"
+}
